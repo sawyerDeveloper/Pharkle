@@ -1,6 +1,7 @@
 var PharkleModel = () => {
     this.dice = [];
-    this.selctedDice = [];
+    this.selectedDice = [];
+    this.remainingDice = [];
     this.currentPoints = 0;
     this.totalPoints = 0;
     this.rollDiceEvent = new Event(this);
@@ -12,5 +13,14 @@ var PharkleModel = () => {
 
 PharkleModel.prototype = {
 
+    init: () => {
+        
+    },
 
-}
+    collectPoints: () => {
+        this.totalPoints += this.currentPoints;
+        this.collectPointsEvent.notify();
+    }
+
+
+};
