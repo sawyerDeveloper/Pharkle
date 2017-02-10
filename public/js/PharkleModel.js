@@ -21,12 +21,13 @@ PharkleModel.prototype = {
         this.totalPoints += this.currentPoints;
         this.collectPointsEvent.notify();
     },
-
+  
     rollDice: function(){
         var tempDiceArray = [];
         for(var i=0; i<6; i++){
             var diceValue= Math.floor(Math.random() *6);
         }
+
     }
 
 

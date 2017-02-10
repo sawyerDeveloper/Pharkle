@@ -10,12 +10,46 @@ var PharkleView = function(model){
 PharkleView.prototype = {
     
     init: function(){
-        this.createSubViews();
+        this.createSubViews()
+            .setupHandlers()
+            .enable();
     },
 
     createSubViews: function(){
         this.$container = $('.pharkle-game');
         this.$rollDiceButton = this.$container.find('.roll-button');
-        console.log(this.$container);
-    }
+        console.log(this.$rollDiceButton);
+
+        return this;
+    },
+
+    setupHandlers: function () {
+
+        this.rollDiceButtonHandler = this.rollDiceButton.bind(this);
+
+        /**
+        Handlers from Event Dispatcher
+        */
+        this.rollDiceHandler = this.rollDice.bind(this);
+
+
+        return this;
+    },
+
+    enable: function () {
+
+        this.$rollDiceButton.click(this.rollDiceButtonHandler);
+
+        /**
+         * Event Dispatcher
+         */
+        this.model.rollDiceEvent.attach(this.rollDiceHandler);
+
+
+        return this;
+    },
+
+    rolldice: function () {
+        this.rollDiceEvent.notify();
+    },
 }
