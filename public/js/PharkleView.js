@@ -18,14 +18,13 @@ PharkleView.prototype = {
     createSubViews: function(){
         this.$container = $('.pharkle-game');
         this.$rollDiceButton = this.$container.find('.roll-button');
-        console.log(this.$rollDiceButton);
 
         return this;
     },
 
     setupHandlers: function () {
 
-        this.rollDiceButtonHandler = this.rollDiceButton.bind(this);
+        this.rollDiceButtonHandler = this.rollDice.bind(this);
 
         /**
         Handlers from Event Dispatcher
@@ -49,7 +48,7 @@ PharkleView.prototype = {
         return this;
     },
 
-    rolldice: function () {
+    rollDice: function () {
         this.rollDiceEvent.notify();
     },
 }
