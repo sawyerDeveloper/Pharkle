@@ -20,6 +20,10 @@ PharkleModel.prototype = {
     collectPoints: function(){
         this.totalPoints += this.currentPoints;
         this.collectPointsEvent.notify();
+    },
+
+    rollDice: function() {
+        console.log('test')
     }
 
 
