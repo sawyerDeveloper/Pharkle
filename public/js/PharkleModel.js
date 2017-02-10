@@ -1,4 +1,4 @@
-var PharkleModel = () => {
+var PharkleModel = function() {
     this.dice = [];
     this.selectedDice = [];
     this.remainingDice = [];
@@ -13,11 +13,11 @@ var PharkleModel = () => {
 
 PharkleModel.prototype = {
 
-    init: () => {
+    init: function() {
         
     },
 
-    collectPoints: () => {
+    collectPoints: function(){
         this.totalPoints += this.currentPoints;
         this.collectPointsEvent.notify();
     }

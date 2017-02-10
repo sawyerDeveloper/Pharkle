@@ -1,4 +1,4 @@
-var PharkleView = (model) => {
+var PharkleView = function(model){
     this.model = model;
     this.rollDiceEvent = new Event(this);
     this.selectDieEvent = new Event(this);
@@ -9,15 +9,13 @@ var PharkleView = (model) => {
 
 PharkleView.prototype = {
     
-    init: () => {
-        this.createSubViews()
-            .setupHandlers()
-            .enable();
+    init: function(){
+        this.createSubViews();
     },
 
-    createSubViews: () => {
+    createSubViews: function(){
         this.$container = $('.pharkle-game');
         this.$rollDiceButton = this.$container.find('.roll-button');
-        console.log(this.$rollButton);
+        console.log(this.$container);
     }
 }

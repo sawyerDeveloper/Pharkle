@@ -1,15 +1,15 @@
-var Event = (sender) => {
+var Event = function(sender) {
     this._sender = sender;
     this._listeners = [];
 }
 
 Event.prototype = {
 
-    attach: (listener) => {
+    attach: function(listener) {
         this._listeners.push(listener);
     },
 
-    notify: (args) => {
+    notify: function(args){
         for (var i = 0; i < this._listeners.length; i++) {
             this._listeners[i](this._sender, args);
         }

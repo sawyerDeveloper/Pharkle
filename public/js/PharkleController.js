@@ -1,4 +1,4 @@
-var PharkleController = (model, view) => {
+var PharkleController = function(model, view){
     this.model = model;
     this.view = view;
 
@@ -7,5 +7,8 @@ var PharkleController = (model, view) => {
 
 PharkleController.prototype = {
 
-    
+    init: function(){
+        
+    }
+
 }
