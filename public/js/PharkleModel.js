@@ -25,7 +25,7 @@ PharkleModel.prototype = {
     rollDice: function(){
         var tempDiceArray = [];
         for(var i=0; i<6; i++){
-            var diceValue= Math.floor(Math.random() *6);
+            var diceValue= Math.floor(Math.random() *6) + 1;
         }
 
     }
