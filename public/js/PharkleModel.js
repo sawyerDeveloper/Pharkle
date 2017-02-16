@@ -14,13 +14,10 @@ var PharkleModel = function() {
 PharkleModel.prototype = {
 
     init: function() {
-        
-        var tempDiceArray = [];
         for(var i=1; i<7; i++){
             var die = new Die(i);
             this.dice.push(die);
         }
-        console.log(this.dice);
     },
 
     collectPoints: function(){

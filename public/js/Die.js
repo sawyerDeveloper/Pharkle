@@ -1,5 +1,5 @@
-var Die = function() {
-    this.id = 0;
+var Die = function(id) {
+    this.id = id;
     this.value = 0;
     this.selected = false;
 
@@ -8,9 +8,8 @@ var Die = function() {
 
 Die.prototype = {
 
-    init: function(id){
-        this.id = id;
-        console.log(id);
+    init: function(){
+        console.log(this.id);
     },
 
     select: function(){
